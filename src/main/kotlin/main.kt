@@ -13,11 +13,13 @@ fun main(args: Array<String>) {
     var tabAtrouver  = IntArray(4) { random.nextInt(max - min) +  min }.asList()
     println(tabAtrouver)
 
-/*    do {
-        nbEssai++*/
+    if(win) {
+
         // saisie de l'utilisateur d'un nombre
         println("Veuillez entrer vos 4 propositions")
+        nbEssai++
 
+}
         val nb1 = readLine()!!.toInt()
         val nb2 = readLine()!!.toInt()
         val nb3 = readLine()!!.toInt()
@@ -43,6 +45,7 @@ fun main(args: Array<String>) {
                 posOk++
                 bonnePosition.add(indice) //
                 if (posOk == 4) { win = true}
+                else {win}
             }
         }
         if (!win) { print("nombre d'élément à la bonne place : $posOk") }
@@ -54,6 +57,7 @@ fun main(args: Array<String>) {
                         mauvaisePos++
                         mauvaisePosition.add(j)
                         if(mauvaisePos ==  0) { win = true}
+                         else {win}
 
                 }
             }
